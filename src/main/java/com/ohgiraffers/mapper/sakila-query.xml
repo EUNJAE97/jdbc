@@ -6,11 +6,13 @@
         SELECT actor_id,first_name,last_name
         FROM actor
         WHERE actor_id = ?
+
     </entry>
     <entry key="select2">
         SELECT actor_id,first_name,last_name
         FROM actor
         WHERE last_name LIKE CONCAT(?,'%')
+        ORDER BY actor_id asc
     </entry>
     <entry key="insert">
         INSERT INTO actor(first_name,last_name)
